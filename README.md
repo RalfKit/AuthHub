@@ -1,31 +1,40 @@
 # AuthHub
 
+## 📌 Status
+
+This project is no longer actively developed and has been archived.
+
+It was an exploration of centralized authentication system design concepts inspired by modern identity providers such as enterprise-grade authentication systems.
+
 ## ✨ Features
 
-- E-Mail- und Passwort-Authentifizierung
-- Passwortprüfung mit HaveIBeenPwned
-- Anmeldung mit Passkeys
-- E-Mail-Verifizierung
-- Zwei-Faktor-Authentifizierung (TOTP)
-- Backup-Codes für 2FA
-- 2FA mit Passkeys und Sicherheitsschlüsseln
-- Passwort-Reset mit 2FA
-- Login-Drosselung und Rate Limiting
+- E-Mail and password authentication
+- Password breach check via HaveIBeenPwned
+- Passkey-based authentication
+- E-Mail verification flow
+- Two-factor authentication (TOTP)
+- Backup codes for 2FA recovery
+- Security key / passkey-based 2FA
+- Secure password reset with 2FA verification
+- Login throttling and rate limiting
 
----
+## 🚀 Setup
 
-## 🚀 Start
-
-1. Erstelle eine `.env`-Datei.
-2. Generiere einen 128-Bit-Schlüssel (16 Byte), base64-kodiert.
-3. Setze diesen als Umgebungsvariable `ENCRYPTION_KEY`.
+1. Create a `.env` file in the project root.
+2. Generate a secure 128-bit encryption key (Base64 encoded, 16 bytes).
+3. Set it as `ENCRYPTION_KEY`.
 
 ```env
 ENCRYPTION_KEY="L9pmqRJnO1ZJSQ2svbHuBA=="
 ```
 
-> Du kannst dazu z. B. `openssl` verwenden:
->
-> ```bash
-> openssl rand --base64 16
-> ```
+### Generate key (recommended)
+
+```bash
+openssl rand --base64 16
+```
+
+## 📌 Notes
+
+- This project is archived and not intended for production use.
+- It serves as a system design and security architecture prototype.
